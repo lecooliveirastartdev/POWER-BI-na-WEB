@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+.container {
+
+    max-width: 1000px;
+    margin: auto;
+}
+
+header {
+
+    background-color: #4bc5ce;
+    text-align: center;
+    color: white;
+    padding: 10px;
+
+}
+
+.title {
+    font-size: 26px;
+
+
+}
+
+section {
+    padding: 100px;
+    background-image: url('../images/Nova.jpg');
+    background-size: cover;
+    overflow: hidden;
+    
+    
+}
+
+.formContainer {
+
+    max-width: 230px;
+    background-color: #ffffffbb;
+    padding: 20px;
+    float: right;
+}
+
+h2 {
+
+    font-size: 16px;
+}
+
+.mb {
+    margin-bottom: 25px;
+}
+
+input,
+select {
+
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+    color: white;
+
+}
+
+input[type="submit"]{
+    color: black;
+    font-size: #4bc5ce;
+    font-weight: bolder;
+}
+select{
+-moz-appearance: none;
+-webkit-appearance: none;
+appearance: none;
+    
+
+    background-image: url('../images/baixados.png');
+    background-repeat: no-repeat;
+    background-position-x:  calc(100% -10px);
+    background-position-y: center;
+}
+.title{
+
+    font-size: 16px;
+}
+

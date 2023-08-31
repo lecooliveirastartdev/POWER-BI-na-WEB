@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/ico.png" type="images/ico/png">
+    <title>Publicando Dashboard na Web</title>
+
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+    <script>
+        function show(pageName, filterValue) {
+
+            var newUrl = baseUrl + "&pageName=" + pageName;
+
+            if (null != filterValue && "" != filterValue) {
+
+                newUrl += "&$filter=Industries/Industry eq '" + filterValue + "'";
+
+            }
+
+            //Assumes there's an iFrame on the page with id="iFrame"
+
+            var report = document.getElementById("iFrame")
+
+            report.src = newUrl;
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container"></div>
+
+
+    <header>
+        <h1 class="title">ANÁLISE DASHBOARD WEB</h1>
+    </header>
+
+    <section>
+        <div class="formContainer">
+            <h2 class="mb">CADASTRE PARA ACOMPANHAR NOSSAS ULTIMAS ANÁLISES</h2>
+            <p class="mb">Temos o objetivo de manter você a par de informações em tempo real</p>
+
+            <form>
+                <input id="name" name="name" type="text" placeholder="Nome">
+
+                <input id="name" email="name" email="text" placeholder="Email">
+
+                <select name="place">
+
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="sp">São paulo</option>
+                    <option value="mg">Minas Gerais</option>
+                    <option value="es">Espírito Santo</option>
+
+                </select>
+                <input type="submit" value="CADASTRE-SE">
+            </form>
+
+        </div>
+    </section>
+
+    <footer>
+        <button class="textLarge" onclick='show("ReportSection", "Energy");' style="display: inline-block;">Exemplo de
+            Análise</button>
+        <div class="description">
+            <h3 class="md">Análises e Relatórios</h3>
+            <p class="md">Acompanhe em tempo real as ultímas análises, mostrando diversos paramentros para tomadas de
+                decisão.</p>
+
+        </div>
+    </footer>
+    <img class="picture" src="/images/AGENERSA M BRASIL.jpg">
+    <iframe title="AGENERSA M BRASIL" width="100%%" height="900" margin="50px text "
+        src="https://app.powerbi.com/reportEmbed?reportId=3be60eaf-7841-4421-9d0b-e44fc703dba7&autoAuth=true&ctid=da49a844-e2e3-40af-86a6-c3819d704f49"
+        frameborder="0" allowFullScreen="true">
+
+    </iframe>
+
+    
+</body>
+
+</html>
